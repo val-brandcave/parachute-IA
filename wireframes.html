@@ -203,8 +203,8 @@
 
   <div class="bh">
     <h1>Inline Workbook Editing — Wireframes</h1>
-    <p>Static screens for the <b>Jul 7 direction</b>: the workbook is the workspace — findings merged in with inline decisions, section-specific edit tools (HubSpot-canvas pattern, crayons-simple), source appraisal as read-only reference, customization tucked behind one button.</p>
-    <div class="meta">Companion to <b>docs/plans/parachute-inline-workbook-plan.md</b> · feedback-log F-143–F-148 · Non-interactive — hover/edit states are drawn in place.</div>
+    <p>Static screens for the <b>Jul 7 direction</b>: the workbook is the workspace — findings with inline decisions, section-specific edit tools (HubSpot-canvas pattern, crayons-simple), customization tucked behind one button. <b>Amended Jul 8:</b> findings live in <b>both</b> the Workbook and the Source view and are editable from either — one shared state; only the source <i>document</i> itself is read-only.</p>
+    <div class="meta">Companion to <b>docs/plans/parachute-inline-workbook-plan.md</b> · feedback-log F-143–F-149 · Non-interactive — hover/edit states are drawn in place.</div>
   </div>
 
   <div class="legendbar">
@@ -393,14 +393,14 @@
 
   <!-- ══════════════════ SCREEN 3 ══════════════════ -->
   <div class="screen">
-    <h2>3 · Source tab — read-only truth</h2>
-    <div class="sub">The former Findings surface, kept as evidence: full appraisal, severity highlights, numbered tags, findings rail as pure navigation. <b>No decision buttons anywhere.</b> Citation chips on workbook blocks deep-link here. <i>(Build-time alternative on record: citation chip → peek drawer over the workbook instead of / in addition to this tab.)</i></div>
+    <h2>3 · Source tab — the evidence view, findings actionable <span style="font-weight:500; font-size:13px; color:var(--ink-2);">(amended Jul 8)</span></h2>
+    <div class="sub">The former Findings surface: full appraisal, severity highlights, numbered tags — and the findings rail keeps its <b>full decision bar</b>. The same findings as the Workbook, backed by one shared state: concur here, it's concurred there. <b>Only the document itself is locked</b> — the appraisal is never edited or disputed. Selecting a passage offers "create finding from here." <i>(Build-time alternative on record: citation chip → peek drawer over the workbook in addition to this tab.)</i></div>
     <div class="frame">
       <div class="chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">parachute.app · review R-2214 · Source</span></div>
       <div class="appbar">
         <span class="logo">◠ Parachute</span><span class="crumb">Reviews / 4407 Meridian Ave</span>
         <div class="tabs"><span class="tab">Workbook</span><span class="tab on">Source <span class="cnt">6 pgs</span></span></div>
-        <div class="right"><span class="btn ghosty" style="position:relative;">Read-only <span class="anno" style="top:-13px; right:-13px;">1</span></span></div>
+        <div class="right"><span class="btn ghosty" style="position:relative;">Document locked <span class="anno" style="top:-13px; right:-13px;">1</span></span></div>
       </div>
       <div class="srcwrap">
         <div class="srcdoc">
@@ -410,15 +410,23 @@
             <span class="hl" style="position:relative;">"…a capitalization rate of 6.25% was selected based on two market transactions closed in 2024…" <span class="mtag red" style="top:-4px;">2</span></span>
             <div class="ln w70"></div><div class="ln w90"></div><div class="ln w60"></div>
             <span class="hl" style="position:relative;">"…Comparable 2 is considered superior to the subject in overall condition…" <span class="mtag" style="top:-4px;">1</span><span class="anno" style="left:-46px; top:0;">2</span></span>
-            <div class="ln w80"></div><div class="ln w90"></div><div class="ln w70"></div>
+            <div class="ln w80"></div><div class="ln w90"></div>
+            <span class="hl" style="position:relative; background:var(--petrol-soft); outline-color:#9ccac3; color:#134e48;">"…the marketing period of four months is consistent with…"&nbsp; <span style="position:absolute; left:8px; bottom:-26px; background:var(--petrol); color:#fff; font-size:10.5px; font-weight:650; padding:4px 12px; border-radius:999px; box-shadow:0 3px 10px rgba(15,118,110,.4); white-space:nowrap;">＋ Create finding from here</span><span class="anno" style="left:-46px; top:0;">4</span></span>
+            <div class="ln w70" style="margin-top:30px;"></div>
           </div>
         </div>
         <div class="srcrail" style="position:relative;">
           <span class="anno" style="top:-13px; left:-13px;">3</span>
           <h4>Findings · 7</h4>
-          <div class="hint">Navigation only — decisions live in the Workbook</div>
-          <div class="srcitem on"><span class="sd"></span>Comp 2 adjustment discrepancy<span class="pg">p.4</span></div>
-          <div class="srcitem"><span class="sd red"></span>Cap-rate support insufficient<span class="pg">p.4</span></div>
+          <div class="hint">Same findings as the Workbook — decide from either place, always in sync</div>
+          <div class="srcitem on" style="flex-direction:column; align-items:stretch;">
+            <div style="display:flex; gap:8px; align-items:flex-start;"><span class="sd"></span>Comp 2 adjustment discrepancy<span class="pg">p.4</span></div>
+            <div class="fbar" style="margin-top:9px; flex-wrap:wrap;"><span class="fbtn go" style="font-size:10.5px; padding:3px 9px;">✓ Concur</span><span class="fbtn" style="font-size:10.5px; padding:3px 9px;">✎ Edit</span><span class="fbtn no" style="font-size:10.5px; padding:3px 9px;">✗ Reject</span><span class="fmore" style="font-size:11px;">🗑 💬 ⚑</span></div>
+          </div>
+          <div class="srcitem" style="flex-direction:column; align-items:stretch;">
+            <div style="display:flex; gap:8px; align-items:flex-start;"><span class="sd red"></span>Cap-rate support insufficient<span class="pg">p.4</span></div>
+            <div class="decided" style="margin-top:6px; font-size:10.5px;">✓ Concurred with edits · 2:14 PM</div>
+          </div>
           <div class="srcitem"><span class="sd"></span>Rent roll variance unexplained<span class="pg">p.3</span></div>
           <div class="srcitem"><span class="sd"></span>Exposure period unsupported<span class="pg">p.5</span></div>
           <div class="srcitem" style="border-style:dashed; color:var(--petrol);">Open in Workbook ↗</div>
@@ -428,9 +436,10 @@
     <div class="callouts">
       <h4>Callouts — screen 3</h4>
       <ol>
-        <li><span class="n">1</span><span><b>Read-only badge</b> — the source is the truth; it is never annotated, disputed, or edited. Everything we built (highlights, tags, anchors) survives as the evidence layer.</span></li>
+        <li><span class="n">1</span><span><b>Document locked</b> — the appraisal itself is never annotated, disputed, or edited; the doc pane carries no edit affordances. Only the finding objects are actionable.</span></li>
         <li><span class="n">2</span><span><b>Deep-link target</b> — clicking "Cited · p.47 ↗" on a workbook finding lands here, scrolled to the exact highlighted span (F-140/141 anchor work reused).</span></li>
-        <li><span class="n">3</span><span><b>Rail = navigation only</b> — click an item → scroll to its span. No Accept/Reject/comment controls; "Open in Workbook ↗" returns you to where decisions happen.</span></li>
+        <li><span class="n">3</span><span><b>Rail = full parity</b> — the same Concur / Edit / Reject (+ delete, comment, flag) as the workbook blocks, same shared state: the second item shows a decision made earlier in the Workbook. Edit expands the item in place — same editor as the workbook block, no side panel.</span></li>
+        <li><span class="n">4</span><span><b>Create finding from a span</b> — select source text → a finding is created with the citation pre-filled; it appears in the Workbook (and this rail) tagged "Reviewer-added." Evidence capture, not source annotation.</span></li>
       </ol>
     </div>
   </div>
@@ -485,7 +494,7 @@
     </div>
   </div>
 
-  <div class="foot">Parachute v2 · inline-workbook wireframes · Jul 7, 2026 · pairs with parachute-inline-workbook-plan.md (F-143–F-148)</div>
+  <div class="foot">Parachute v2 · inline-workbook wireframes · Jul 7, 2026 (amended Jul 8: findings editable from both views) · pairs with parachute-inline-workbook-plan.md (F-143–F-149)</div>
 </div>
 </body>
 </html>
